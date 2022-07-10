@@ -65,14 +65,33 @@
 // array = [1, 2, 3, 4, 5, 20];
 // console.log(sumArray(array));
 
-const findMax = (numbers) => {
-  let result = 0;
+// const findMax = (numbers) => {
+//   let result = numbers[0];
 
-  for (const num of numbers) {
-    console.log(num);
+//   for (const num of numbers) {
+//     if (num > result) {
+//       result = num;
+//     } else {
+//       console.log("Enter the number");
+//     }
+//   }
+//   return { result };
+// };
+
+// array = [1, 2, 4, 5, 9, 2];
+// console.log(findMax(array));
+
+const letterFrequency = (phrase) => {
+  let freq = {};
+  for (const letter of phrase) {
+    if (letter in freq) {
+      freq[letter] += 1;
+    } else {
+      freq[letter] = 1;
+    }
   }
-  return { result: result };
+  return { freq };
 };
 
-array = [1, 2, 4, 5, 9, 2];
-console.log(array);
+let phrase = prompt("write somthing idoit");
+console.log(letterFrequency(phrase));
