@@ -15,7 +15,7 @@
 //   console.log(fruit);
 // }
 
-const numbers = [1, 2, 3, 4, 5, 6];
+// const numbers = [1, 2, 3, 4, 5, 6];
 
 // let result = [];
 // let num;
@@ -38,13 +38,41 @@ const numbers = [1, 2, 3, 4, 5, 6];
 
 //letter counter
 
-const letterCounter = () => {
-  const phrase = "hey, can you bring me food, please!!";
+// const letterCounter = (phrase) => {
+//for of -> it is for letter  //for in -> it is for index
+// let result = 0;
 
-  //for of -> it is for letters
-  //for in -> it is for index
-  for (const letter in phrase) {
-    console.log(letter);
+// for (const index in phrase) {
+//   console.log(Number(index) + 1);
+//   result = Number(index) + 1;
+//   //typecasting -> changing one data type to another i.e here
+//   // sting changes to integer
+// }
+//   return { result: phrase.length };
+// };
+// const phrase = prompt("Write any phrase and get the count.");
+// console.log(letterCounter(phrase));
+
+// const sumArray = (numbers) => {
+//   let result = 0;
+//   for (const num of numbers) {
+//     console.log(num);
+//     result += Number(num);
+//   }
+//   return { result: result };
+// };
+
+// array = [1, 2, 3, 4, 5, 20];
+// console.log(sumArray(array));
+
+const findMax = (numbers) => {
+  let result = 0;
+
+  for (const num of numbers) {
+    console.log(num);
   }
+  return { result: result };
 };
-letterCounter();
+
+array = [1, 2, 4, 5, 9, 2];
+console.log(array);
