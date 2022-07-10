@@ -20,14 +20,36 @@
 
 // console.log(person);
 
-const introducer = (name, shirt) => {
+// const introducer = (name, shirt) => {
+//   const person = {
+//     name: name,
+//     shirt: shirt,
+//   };
+//   const intro = `hii, my is ${person.name}.my shirt colour is ${person.shirt}.`;
+
+//   return intro;
+// };
+
+// console.log(introducer("kunal", "black"));
+// console.log(introducer("Leonardo", "white"));
+
+const intro = (name, age) => {
   const person = {
     name: name,
-    shirt: shirt,
+    age: age,
+    assets: 40000,
+    debt: 3000,
+    netWorth: function () {
+      return this.assets - this.debt;
+      //this <- it means that it is getting value from person.
+    },
   };
-  const intro = `hii, my is ${person.name}.my shirt colour is ${person.shirt}.`;
 
-  return intro;
+  //   const net Worth = person.assets - person.debt;
+
+  const intro1 = `Hey, myself ${person.name} and my age is ${person.age}.
+  my networth is ${person.netWorth()} rupees`;
+  return intro1;
 };
 
-console.log(introducer("kunal", "black"));
+console.log(intro("kunal", 21));
