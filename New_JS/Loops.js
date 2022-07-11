@@ -81,17 +81,34 @@
 // array = [1, 2, 4, 5, 9, 2];
 // console.log(findMax(array));
 
-const letterFrequency = (phrase) => {
+// //letter frequency
+// const letterFrequency = (phrase) => {
+//   let freq = {};
+//   for (const letter of phrase) {
+//     if (letter in freq) {
+//       freq[letter] += 1;
+//     } else {
+//       freq[letter] = 1;
+//     }
+//   }
+//   return { freq };
+// };
+
+// let phrase = prompt("write somthing idoit");
+// console.log(letterFrequency(phrase));
+
+//Frequency if words
+const wordFreq = (phrase) => {
   let freq = {};
-  for (const letter of phrase) {
-    if (letter in freq) {
-      freq[letter] += 1;
+  words = phrase.split(" ");
+  for (const word of words) {
+    console.log(word);
+    if (word in freq) {
+      freq[word]++;
     } else {
-      freq[letter] = 1;
+      freq[word] = 1;
     }
   }
   return { freq };
 };
-
-let phrase = prompt("write somthing idoit");
-console.log(letterFrequency(phrase));
+console.log(wordFreq("lol Hello World lol"));
