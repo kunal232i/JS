@@ -91,24 +91,25 @@
 //       freq[letter] = 1;
 //     }
 //   }
-//   return { freq };
+//   return freq;
 // };
 
-// let phrase = prompt("write somthing idoit");
-// console.log(letterFrequency(phrase));
+// // let phrase = prompt("write somthing idoit");
+// // console.log(letterFrequency(phrase));
 
-//Frequency if words
-const wordFreq = (phrase) => {
-  let freq = {};
-  words = phrase.split(" ");
-  for (const word of words) {
-    console.log(word);
-    if (word in freq) {
-      freq[word]++;
-    } else {
-      freq[word] = 1;
-    }
-  }
-  return { freq };
-};
-console.log(wordFreq("lol Hello World lol"));
+// //Frequency if words
+// const wordFreq = (phrase) => {
+//   const words = phrase.split(" ");
+//   return letterFrequency(words);
+// };
+
+// const userInput = prompt("Enter the sentence");
+// console.log(wordFreq(userInput));
+
+function howManySeconds(hours) {
+  let minutes = hours * 60;
+  let seconds = minutes * 60;
+
+  return seconds;
+}
+console.log(howManySeconds(1));
