@@ -48,9 +48,26 @@
 // arrayMethods.innerHTML = `<h1>${names}</h1>`;
 
 //reduce
-const sumArray = (numbers) => {};
+// let nums = [1, 2, 3, 4, 5];
 
-let nums = [1, 2, 3, 4, 5];
+// const result = nums.reduce((a, b) => a + b);
+// console.log(result);
 
-const result = nums.reduce((prev, curr) => prev + curr);
-console.log(result);
+// let nums = [1, 2, 3, 4];
+// function mul(a, b) {
+//   return a * b;
+// }
+
+// const result = nums.reduce(mul);
+// console.log(result);
+
+// const actors = [
+//   { name: "johnny", netWorth: 2000000 },
+//   { name: "amber", netWorth: 10 },
+//   { name: "matt", netWorth: 170000000 },
+//   { name: "brad", netWorth: 300000000 },
+//   { name: "leonardo", netWorth: 10000000 },
+// ];
+// let result = actors.reduce((a, b) => a + b.netWorth, 0);
+
+// console.log(result);
