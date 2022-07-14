@@ -27,8 +27,17 @@ const squares = document.querySelectorAll(".colorSquare");
 //for Each
 const timesClicked = { red: 0, yellow: 0, green: 0 };
 squares.forEach((square) => {
-  square.onclick = () => console.log(square.value);
-  timesClicked[square.value] += 1;
-  square.innerText = timesClicked[square.value];
-  //   square.innerText = timesClicked[square.value];
+  square.onclick = () => {
+    console.log(square.value);
+    timesClicked[square.value] += 1;
+    square.innerText = timesClicked[square.value];
+  };
 });
+
+const clearScore = () => {
+  squares.forEach((square) => {
+    square.innerText = "";
+  });
+};
+let CleargameDiv = document.getElementById("Clear_game");
+CleargameDiv.onclick = () => clearScore();
