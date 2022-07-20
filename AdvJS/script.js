@@ -23,14 +23,37 @@ const Promise1 = new Promise((resolve, reject) => {
 // );
 
 const getSoup = async () => {
+  const data = {
+    rating: null,
+    tip: null,
+    pay: null,
+    review: null,
+  };
+
   try {
     const soup = await Promise1;
     console.log(soup);
+    data.rating = 5;
+    data.tip = 0.2;
+    data.pay = 10;
+    data.review = 5;
+    return data;
   } catch (error) {
     console.log(error);
+    data.rating = 1;
+    data.tip = 0;
+    data.pay = 0;
+    data.review = 1;
+    return data;
   }
 };
-getSoup();
+
+getSoup().then((value) => console.log(value));
+
+//whenever you see async function if you need output of that function
+//then you have to await or use -> .then for output.
+// const sum = async (a, b) => a + b;
+// sum(1, 2).then((value) => console.log(value));
 
 // const url = "https://dog.ceo/api/breeds/image/random";
 // fetch(url) // promise
